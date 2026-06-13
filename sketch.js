@@ -1,17 +1,17 @@
 await Canvas();
 
-let diameters = [.0000001]
+let diameters = [.1]
 let ahh = 1
 let reset = true
 
 angleMode(DEGREES)
 
 function makeDiameters (howMany,bigness) {
-    diameters = [.0000001]
+    diameters = [.1]
     for (let i = 0; i<=howMany; i++) {
         //diameters.push(1+i) //infinite tunnel (start at 1)
         //diameters.push(1+i**3/3) //makes cool thing with no overlap for a while (start at 1)
-        diameters.push((2**bigness)*.0000001*(1.36**i)) //makes PERFECT thing with no overlap (start at 1)
+        diameters.push((2**bigness)*.1*(1.36**i)) //makes PERFECT thing with no overlap (start at 1)
     }
     log(diameters)
 }
@@ -47,7 +47,7 @@ q5.draw = function () {
         ahh=1.5
         reset=false
     }
-    makeDiameters(70,ahh)
+    makeDiameters(30,ahh)
     drawCircles(diameters,6)
     ahh+=0.015
     log(ahh)
