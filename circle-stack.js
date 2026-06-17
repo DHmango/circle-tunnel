@@ -3,19 +3,19 @@ await Canvas();
 let diameters
 const linModifier = createSlider(-0.4,0.4,0,0.0001)
 const ampModifier = createSlider(0,5,1,0.0001)
-const freqModifier = createSlider(0,1,.25,0.0001)
+const freqModifier = createSlider(0,2,.25,0.0001)
 const shininess = createSlider(0,1,.5,0.0001)
 const sizeMod = createSlider(0,2,1,0.0001)
-const widthMod = createSlider(1,200,30,1)
+const widthMod = createSlider(1,150,30,1)
 const triangle = createCheckbox('',true)
 let phaseShift = 0
-linModifier.position(0,0).size(windowWidth)
-ampModifier.position(0,15).size(windowWidth)
-freqModifier.position(0,30).size(windowWidth)
-shininess.position(0,45).size(windowWidth)
-sizeMod.position(0,60).size(windowWidth)
-widthMod.position(0,75).size(windowWidth)
-triangle.position(0,90)
+linModifier.position(0,0).size(windowWidth).title = 'how much to change circle size each successive step'
+ampModifier.position(0,15).size(windowWidth).title = 'amplitude of wave'
+freqModifier.position(0,30).size(windowWidth).title = 'frequency of wave'
+shininess.position(0,45).size(windowWidth).title = 'adjusts how the shading happens'
+sizeMod.position(0,60).size(windowWidth).title = 'makes the circles look bigger but not change anything'
+widthMod.position(0,75).size(windowWidth).title = 'how many circles? in the same space'
+triangle.position(0,90).title = ''
 
 angleMode(DEGREES)
 function makeDiameters (howMany,bigness) {
